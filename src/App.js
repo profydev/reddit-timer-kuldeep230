@@ -1,6 +1,7 @@
 /* eslint-disable quotes */
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Header from "./Header";
 import GlobalStyle from "./globalStyles";
 
 function App() {
@@ -8,9 +9,12 @@ function App() {
     <Router>
       <div>
         <GlobalStyle />
+        <Header />
         App Placeholder
-        <Route exact path="/" />
-        <Route exact path="/search" />
+        <Switch>
+          <Route exact path="/" />
+          <Route exact path="/search" />
+        </Switch>
       </div>
     </Router>
   );
